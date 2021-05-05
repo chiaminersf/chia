@@ -1,4 +1,0 @@
-# log inspection
--- show average total time -- 
-grep -nr "Total time" ~/.chia/mainnet/plotter | cut -c105-113 | awk '{ total += $1; count++ } END { print "Average Total time: " total/count }'
-
