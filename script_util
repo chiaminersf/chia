@@ -1,3 +1,8 @@
 # log inspection
--- show time spent in each phase and total time -- 
+# show time spent in each phase and total time -- 
 grep -nr "phase 1 = " ~/.chia/mainnet/plotter | cut -c110-118 | awk '{ total += $1; count++ } END { print "Average phase 1 time: " total/count/3600 " hour" }' && grep -nr "phase 2 = " ~/.chia/mainnet/plotter | cut -c110-118 | awk '{ total += $1; count++ } END { print "Average phase 2 time: " total/count/3600 " hour" }' && grep -nr "phase 3 = " ~/.chia/mainnet/plotter | cut -c110-118 | awk '{ total += $1; count++ } END { print "Average phase 3 time: " total/count/3600 " hour" }' &&  grep -nr "phase 4 = " ~/.chia/mainnet/plotter | cut -c110-118 | awk '{ total += $1; count++ } END { print "Average phase 4 time: " total/count/4600 " hour" }' && grep -nr "Total time" ~/.chia/mainnet/plotter | cut -c105-113 | awk '{ total += $1; count++ } END { print "Average Total time: " total/count/3600 " hour"}'
+
+
+#kill all chia process 
+ps aux | grep chia |  awk '{print $2}'  |  xargs sudo kill -9
+
