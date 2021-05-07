@@ -6,3 +6,5 @@ grep -nr "phase 1 = " ~/.chia/mainnet/plotter | cut -c110-118 | awk '{ total += 
 #kill all chia process 
 ps aux | grep chia |  awk '{print $2}'  |  xargs sudo kill -9
 
+# show latest challenge log
+grep -r "eligible" ~/.chia/mainnet/log/debug.log
