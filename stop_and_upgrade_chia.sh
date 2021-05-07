@@ -1,6 +1,6 @@
 
 # kill existing process
-ps aux | grep chia |  awk '{print $2}'  |  xargs sudo kill -9
+# ps aux | grep chia |  awk '{print $2}'  |  xargs sudo kill -9
 cd
 cd chia-blockchain
 chia stop -d all
