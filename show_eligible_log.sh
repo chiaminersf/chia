@@ -1,2 +1,2 @@
 
-tail -n200 ~/.chia/mainnet/log/debug.log | grep "eligible"
+tail -n200 ~/.chia/mainnet/log/debug.log | grep -a "eligible"
