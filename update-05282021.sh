@@ -2,12 +2,6 @@ cd
 cd chiascripthelper
 git reset --hard HEAD
 git pull origin main
-sh set-reserve-space-to-0-for-all-dest.sh
-
-
-echo "set all dest to 0% reserve"
-sleep 1
-
 
 
 cd
