@@ -32,21 +32,11 @@ sh install.sh
 chmod +x ./install-gui.sh
 ./install-gui.sh
 
-echo "Step2: install plotman and copy config"
-sleep 2
 
-pip install --force-reinstall git+https://github.com/chiaminersf/plotman.git
-plotman config generate
-cp ~/chiaprivatesettings/eric1/plotman.yaml ~/.config/plotman/plotman.yaml
-echo "copied ~/chiaprivatesettings/eric1/plotman.yaml to ~/.config/plotman/plotman.yaml"
-mkdir -p ~/plotman/logs
-echo "created directory ~/plotman/logs"
-deactivate
-
-echo "Step3: install metricreporter"
+echo "Step2: install metricreporter"
 sleep 2
 cd
 cd metricreporter
 sh install.sh
 
-echo "All steps finished"
+echo "Both two steps finished"
