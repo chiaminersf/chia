@@ -3,11 +3,10 @@ sleep 2
 
 cd
 git clone https://github.com/chiaminersf/plotman.git
-git clone https://github.com/chiaminersf/chiadog.git
 git clone https://github.com/chiaminersf/chiaprivatesettings.git
 git clone https://github.com/chiaminersf/metricreporter.git
 
-echo "install chia-blockchain and build"
+echo "Step1: install chia-blockchain and build"
 sleep 2
 
 sudo apt-get update
@@ -33,7 +32,7 @@ sh install.sh
 chmod +x ./install-gui.sh
 ./install-gui.sh
 
-echo "install plotman and copy config"
+echo "Step2: install plotman and copy config"
 sleep 2
 
 pip install --force-reinstall git+https://github.com/chiaminersf/plotman.git
@@ -44,7 +43,7 @@ mkdir -p ~/plotman/logs
 echo "created directory ~/plotman/logs"
 deactivate
 
-echo "install metricreporter"
+echo "Step3: install metricreporter"
 sleep 2
 cd
 cd metricreporter
