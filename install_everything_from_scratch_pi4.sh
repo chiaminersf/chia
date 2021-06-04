@@ -49,4 +49,4 @@ cd
 cd metricreporter
 sh install.sh
 
-echo "all finish"
+echo "All steps finished"
