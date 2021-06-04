@@ -23,7 +23,7 @@ cd chia-blockchain
 chia start harvester -r
 
 
-report_pid=$(ps aux | grep harvester | grep -v grep | awk '{print $2}')
+report_pid=$(ps aux | grep chia_harvester | grep -v grep | awk '{print $2}')
 if [ -z "$report_pid" ]
 then
 	echo "Failed: not started chia harvester"
