@@ -36,6 +36,7 @@ chmod +x ./install-gui.sh
 echo "Step2: install metricreporter"
 sleep 2
 cd
+sudo apt-get install python3-pip
 cd metricreporter
 sh install.sh
 
