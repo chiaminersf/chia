@@ -2,6 +2,8 @@ cd
 echo "Step1: (re)start reporter"
 sleep 1
 ps aux | grep chiaminersf_reporter.py | grep -v grep |  awk '{print $2}'  |  xargs sudo kill -9
+cd ~/metricreporter
+
 . ./venv/bin/activate
 python chiaminersf_reporter.py > /dev/null 2>&1 &
 
