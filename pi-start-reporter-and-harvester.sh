@@ -18,6 +18,7 @@ fi
 echo "Step2: (re)start harvester"
 sleep 1
 
+cd
 cd chia-blockchain
 . ./activate
 chia start harvester -r
