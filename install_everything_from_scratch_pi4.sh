@@ -40,4 +40,10 @@ sudo apt-get install python3-pip
 cd metricreporter
 sh install.sh
 
-echo "Both two steps finished"
+echo "Step3: install ntfs-3g"
+sleep 2
+sudo apt-get upgrade
+sudo apt-get install ntfs-3g
+
+
+echo "All three steps finished"
