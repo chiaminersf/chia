@@ -1,9 +1,9 @@
+ps aux | grep -e 'chia' -e chiaminersf_reporter.py | grep -v grep |  awk '{print $2}'  |  xargs sudo kill -9
+
 
 cd
 cd chia-blockchain
-. ./activate
-chia stop -d all
-deactivate
+
 git fetch
 git checkout latest
 git reset --hard FETCH_HEAD
@@ -29,5 +29,3 @@ cd ..
 chmod +x ./install-gui.sh
 ./install-gui.sh
 
-cd chia-blockchain-gui
-npm run electron &
