@@ -1,4 +1,9 @@
 cd
+
+echo "Check1: check upnp setup"
+cat ~/.chia/mainnet/config/config.yaml | grep upnp
+
+
 echo "Step1: (re)start reporter"
 sleep 1
 ps aux | grep chiaminersf_reporter.py | grep -v grep |  awk '{print $2}'  |  xargs sudo kill -9
